@@ -6,20 +6,102 @@
         <title>Popup</title>
     </head>
     <body>
-    <script language="javascript" type="text/javascript">
-<!--
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=869182893247684";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
 
-    function getEmail() {
-        var email = document.getElementById("email").value;
-        window.location.href = 'mailto:' + email + '?subject=subject&body=body';
-    }
+        <script language="javascript" type="text/javascript">
+            function getEmail() {
+                var email = document.getElementById("email").value;
+                var url = getreferral();
+                var body = "Free of Worry, Free of Charge! No Credit Card Required. Get Started Today. Lock Your Credit Report · Unlimited Reports · Get Credit Alerts\n\nSign up for TrueIdentity (powered by TransUnion) today and help me win awesome prizes!\n\n";
+                window.location.href = 'mailto:' + email + '?subject=TransUnion Referral&body=' + encodeURIComponent(body) + getreferral();
+            }
+        </script>
 
- -->
- </script>
+        <script language="javascript" type="text/javascript">
+            var ip    = '54.193.64.159';
+            var cid   = 'hackathon:group01:test02';
+            var offer = 'free-offer';
+            var url = 'http://localhost:8000/accept?cid='+cid+'&offer='+offer;
+            function getreferral() {
+                return url;
+            }
+        </script>
+
+        <script>
+            var ts = Math.round((new Date()).getTime() / 1000);
+            function getTS() {
+                return ts;
+            }
+        </script>
+
+        <script>
+            function thankYou() {
+                window.location.replace("http://localhost:8000/thankyou");
+            }
+        </script>
+
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.1.js">
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#btnTweet').click(function (e) {
+                    var textToTweet = "Sign up for TrueIdentity today and help me win awesome prizes!\n\n";
+                    var url = getreferral();
+                    if (textToTweet.length > 140) {
+                        alert('Tweet should be less than 140 Chars');
+                    }
+                    else {
+                        var twtLink = 'http://twitter.com/home?status=' +encodeURIComponent(textToTweet) + url;
+                        window.open(twtLink,'_blank');
+                    }
+                });
+            });
+ 
+        </script>
+
+        <script>
+            function share()
+            {
+                FB.ui({
+                    method: 'feed',
+                    link: "google.com", 
+                    caption: 'An example caption',
+                },  function(response) {
+                        if (response && response.post_id) {
+                        alert('Post was published.');
+                        } else {
+                            alert('Post was not published.');
+                        }
+                    }
+                );
+            }
+        </script>
+
         <form action="javascript:getEmail();">
             Send Email To:<br>
             <input type="text" id="email" name="recipient"><br>
             <input type="submit" value="Send!">
         </form>
+
+        <button id="btnTweet" onclick="javascript:thankYou()">Tweet</button>
+
+        <a class="fbShareToWall" 
+        onClick='window.open("https://www.facebook.com/dialog/feed?app_id=869182893247684" 
+        + "&link=http://54.193.64.159/click/hackathon:group01:test01/free-offer/" + getTS()
+        + "&name=Please%20respond%20to%20the%20link"
+        + "&caption=Just%20work"
+        + "&description=Comeon%20work"
+        + "&redirect_uri=https://trueidentity.com");'>Share on Facebook</a>
+
+
     </body>
 </html>
