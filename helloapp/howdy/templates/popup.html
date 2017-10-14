@@ -6,20 +6,42 @@
         <title>Popup</title>
     </head>
     <body>
-    <script language="javascript" type="text/javascript">
-<!--
 
+    </script>
+    <script language="javascript" type="text/javascript">
     function getEmail() {
         var email = document.getElementById("email").value;
-        window.location.href = 'mailto:' + email + '?subject=subject&body=body';
+        window.location.href = 'mailto:' + email + '?subject=TransUnion Referral&body=blah blah blah';
     }
+    </script>
 
- -->
- </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.1.js">
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+    $('#btnTweet').click(function (e) {
+    var textToTweet = "Free of Worry, Free of Charge! No Credit Card Required. Get Started Today. Lock Your Credit Report · Unlimited Reports · Get Credit Alerts";
+    if (textToTweet.length > 140) {
+    alert('Tweet should be less than 140 Chars');
+    }
+    else {
+    var twtLink = 'http://twitter.com/home?status=' +encodeURIComponent(textToTweet);
+    window.open(twtLink,'_blank');
+    }
+    });
+    });
+ 
+    </script>
+
         <form action="javascript:getEmail();">
             Send Email To:<br>
             <input type="text" id="email" name="recipient"><br>
             <input type="submit" value="Send!">
         </form>
+
+        <h1>tweet from debugmode</h1>
+        <button id="btnTweet">Tweet</button>
+
     </body>
 </html>
