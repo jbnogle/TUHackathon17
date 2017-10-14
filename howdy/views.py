@@ -6,14 +6,11 @@ from django.views.generic import TemplateView
 class HomePageView(TemplateView):
     template_name = "index.html"
 
+class PopupPageView(TemplateView):
+    template_name = "popup.html"
+
 class AcceptPageView(TemplateView):
     template_name = "accept.html"
 
-class StatsPageView(TemplateView):
-    template_name = "stats.html"
-
-class AboutPageView(TemplateView):
-    template_name = "about.html"
-
-class PopupPageView(TemplateView):
-    template_name = "about.html"
+class ThanksPageView(TemplateView):
+	template_name = "thanks.html"
