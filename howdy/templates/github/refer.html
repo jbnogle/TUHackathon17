@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+          <link rel="stylesheet" href="tu-font-awesome.css">
+          <link rel="stylesheet" href="tu-font-awesome-animation.min.css">
+          <link rel="stylesheet" href="tu-main.css">
+        <title>True Identity - Account Summary</title>
+        <style>
+            
+            @font-face{
+                font-family:'Intro';
+                src:url(IntroRegular.ttf);
+            }
+            
+            @font-face{
+                font-family:'TuFontAwesome'
+                    src:url(tu-fontawesome-webfont.ttf);
+            }
+            
+            body{
+                margin: 0px auto;
+                width:100vw;
+            }
+        
+            
+            nav {
+                font-family: 'IntroRegular', sans-serif;
+                padding-right:30px;
+                background-color: #006784;
+
+            }
+            
+            ul{
+                display:flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            
+            li{
+                display:flex;
+                justify-content: space-between;
+                list-style-type: none;
+                padding-left:30px;
+
+            }
+            
+            a{
+                text-decoration:none;
+                color:white;
+                line-height:50px;
+                padding-left:30px;
+                padding-top:5px;
+            }
+            
+            a:hover{
+                color:#FCD702;
+            }
+            
+            i{
+                padding-right:5px;
+            }
+            
+            .yellowbar{
+                background-color:#FCD702;
+                height:1vh;
+            }
+            
+            .logo{
+                padding-left:4vw;
+                padding-top:1vh;
+                display:flex;
+            }
+            
+            .thin{
+                font-weight: 100;
+            }
+            
+            h1{
+                padding-top:20px;
+                padding-left:10px;
+                font-size:35px;
+            }
+            
+            div{
+                border: 3 px solid black;
+            }
+            
+            #secondary{
+                padding-left:50px;
+                padding-top:55px;
+                background-color:white;
+            }
+            
+            #secondary li, #secondary a{
+                color:#006784;
+                padding-left:15px;
+            }
+            
+            .notifications{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .notifications img{
+                width:90vw;
+                padding-left:5vw;
+                max-height:52px;
+                padding-top:20px;
+            }
+            
+            .main{
+                margin-top: 30px;
+                display:flex;
+                justify-content: space-around;
+                padding: 0px 15px;
+            }
+            
+            .main img{
+                width:275px;
+                max-height: 342px;
+            }
+            
+            footer{
+                margin-top:40px;
+                margin-bottom:50px;
+                
+            }
+            
+            footer>p{
+                padding-left:40px;
+                font-size:12px;
+            }
+            
+            footer>h3{
+                padding-left:40px;
+                font-size:20px;
+            }
+ 
+        </style>
+    </head>
+    
+    
+    <body>
+        <nav>
+            <ul>
+                <li><a href>Alerts</a></li>
+                <li><a href>Profile</a></li>
+                <li><a href="refer.html">Refer a Friend</a></li>
+                <li><a href>Logout</a></li>
+                
+            </ul>
+        </nav>
+        <div class="yellowbar"></div>
+        <div class="logo">
+            <h1><span class="thin">True</span>Identity</h1>
+            <!-- <p>Part of TransUnion</p> -->
+            <nav id="secondary">
+                <ul>
+                    <li><a href>Dashboard</a></li>
+                    <li><a href>ID Protection</a></li>
+                    <li><a href>ID Resolution</a></li>
+                    <li><a href>Credit Score</a></li>
+                    <li><a href>Credit Report</a></li>
+                    <li><a href>My Savings</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="notifications">
+            <img src="images/yellownotif.png">
+            <img src="images/rednotif.png">
+        </div>
+        <div class="main">
+            <img src="images/creditlock.png">
+            <img src="images/creditalerts.png">
+            <img src="images/coverage.png">
+        </div>
+            
+        <footer>
+            <div class="yellowbar"></div>
+            <h3>TrueIdentity is part of TransUnion&reg;</h3>
+            <p>This site is hosted and operated by TransUnion Consumer Interactive, Inc., a wholly owned subsidiary of<br>
+            TransUnion, LLC. &copy; Copyright 2017 TransUnion Consumer Interactive. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
